@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demonstration of Paging Technique</h1>
+
+    <label for="input_pf_order">
+        Enter comma-separated values for page frame order (in order of earliest arrival ) : 
+        <input type="text" name="input_pf_order" id="input_pf_order">
+    </label>
+    <button onclick="initial_insert()">Enter initial requests</button>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+    <div class="column">
+    <table>
+        <tr>
+            <td>Page No.</td>
+            <td>Referring Page Frame</td>
+            <td>Memory Space</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="7">-</td>
+            <td>28k-32k</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="6">-</td>
+            <td>24k-28k</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="5">-</td>
+            <td>20k-24k</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="4">-</td>
+            <td>16k-20k</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="3">-</td>
+            <td>12k-16k</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="2">-</td>
+            <td>8k-12k</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="1">-</td>
+            <td>4k-8k</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td id="0">-</td>
+            <td>0-4k</td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="column">
+    <table>
+        <tr>
+            <td>Page Frame No.</td>
+            <td>Memory Space</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>12k-16k</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>8k-12k</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>4k-8k</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0-4k</td>
+        </tr>
+    </table>
+</div>
+</div>
+
+<br>
+<br>
+<label for="page_req">
+    Enter virtual memory address : 
+<input type="text" id="page_req">
+</label>
+
+<input type="button" value="Enter" onclick="performaddrconversion()">
+
+<p id="pf-status"></p>
+
+<br>
+<br>
+
+<p id="table-text"></p>
+<p id="table"></p>
+
+<br>
+<br>
+<h2 id="conv-vir-to-phy"></h2>
+<p id="conv-desc"></p>
+<p id="phy_addr"></p>
+
+<h2>Resultant Physical Address : </h2>
+<table><tr><td id="phy_dec_add" style="text-align: center"></td></tr></table>
+
+<script src="script.js"></script>
+</body>
+</html>
