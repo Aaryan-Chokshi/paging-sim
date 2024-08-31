@@ -1,4 +1,4 @@
-# os-project
+# paging-sim
 A college project demonstrating the use of paging to convert virtual memory addresses to physical memory addresses.
 
 This project was made possible as an assignment given by the university for making an operating-systems based simulation.
